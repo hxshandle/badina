@@ -1,15 +1,12 @@
 $(function () {
-  function toggleTopNav() {
-    var scrollTop = $(window).scrollTop();
-    var WH = $(window).height();
-    if (scrollTop > WH - 77) {
-      $('.top-nav').fadeIn(1000);
-    } else {
-      $('.top-nav').fadeOut(1000);
-    }
-  }
 
-  //$(window).on('scroll', toggleTopNav);
+  $('.top-nav-bar-light').each(function(){
+    var $this = $(this);
+    var parentName = $this.parent().attr('id');
+    var sel = 'a[href=#{0}]'.format(parentName);
+    console.debug('...{0}'.format(sel));
+    $(sel,$this).addClass('active');
+  });
 
 
   function getChineseTextLength(val) {
@@ -22,12 +19,12 @@ $(function () {
   }
 
   // click
-  $('.top-nav-bar a').click(function () {
+  $('.top-nav-bar a,.top-nav-bar-light a').click(function () {
     App.switchPage($(this).attr('href'));
     return false;
   });
   // hover 
-  $('.top-nav-bar a').hover(
+  $('.top-nav-bar a,.top-nav-bar-light a').hover(
     function () {
       var $this = $(this);
       var _w = $this.width();

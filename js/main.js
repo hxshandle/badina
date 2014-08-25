@@ -1,7 +1,25 @@
 var WW, WH;
 var App={
+  blockedPageSwitch:false,
   switchPage:function(pageId){
-    console.debug("switch page "+pageid);
+    if(this.blockedPageSwitch){
+      console.debug('blocked ...');
+      return;
+    }
+    var currentActivePageId = $('.page.active').attr('id');
+    if(pageId.substr(1) == currentActivePageId){
+      return;
+    }
+    // start switch
+    this.blockedPageSwitch = true;
+    var that = this;
+    $(pageId).css({left:WW+'px','z-index':200}).toggleClass('active');
+    $(pageId).animate({left:"0px"},800,'swing',function(){
+      $('#'+currentActivePageId).toggleClass('active').css({'z-index':100});
+      $(pageId).css({'z-index':100});
+      that.blockedPageSwitch = false;
+    });
+
   }
 };
 function landingLayout() {

@@ -30,6 +30,7 @@ ul,li{
 
 .page-wrapper{
   position:relative;
+  overflow-x: hidden;
   .page{
     position:absolute;
     width:100%;
@@ -48,4 +49,7 @@ ul,li{
 }
 .fr{
   float:right;
+}
+.clear{
+  clear:both;
 }

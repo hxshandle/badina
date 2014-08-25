@@ -1,0 +1,21 @@
+- var m = ["spring","summer","autumn","winter"]
+.page#lookbooks
+  include _nav_bar_light
+  .content
+    ul#lookbooks-nav
+      each item in m
+        li
+          a(href="javascript:void(0)") #{item.toUpperCase()}
+  .gallery-wrapper
+    each item in m
+      ul.gallery-entry(id="#{item}-gallery")
+        - for (var i =0; i < 20;i++)
+          - var _src = "img/lookbooks/images-"+(i%4+1)+".jpg"
+          li
+            .image-pod
+              img(src=_src)
+              .extra
+                a.weibo weibo
+                a.weixin weixin
+
+
