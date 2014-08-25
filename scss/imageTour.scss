@@ -1,0 +1,38 @@
+#image-tour-mask{
+  position: fixed;
+  z-index: 999;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: url(../img/image-tour-mask-bg.png);
+  display: none;
+  &.active{
+    display:block;
+  }
+  .image-tour-close{
+    position: absolute;
+    right: 50px;
+    top: 25px;
+    z-index: 1;
+    cursor:pointer;
+  }
+  .image-tour-next,.image-tour-pre{
+    position:absolute;
+    height:100%;
+    width:100px;
+    cursor:pointer;
+  }
+  .image-tour-pre{
+    background: url(../img/arrow-l.png) no-repeat 50% 50%;
+    left: 0px;
+  }
+  .image-tour-next{
+    background: url(../img/arrow-r.png) no-repeat 50% 50%;
+    right: 0px;
+  }
+  .image-tour-display-wrapper{
+    margin:0 auto;
+    width:1px;
+  }
+}

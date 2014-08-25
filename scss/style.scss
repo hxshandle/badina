@@ -1,0 +1,64 @@
+@font-face {
+  font-family: didot-bold;
+  src: url(../fonts/Didot_Bold.ttf);
+}
+@font-face {
+  font-family: didot;
+  src: url(../fonts/Didot.ttf);
+}
+@font-face {
+  font-family: didot-htf-m96-medium-ital;
+  src: url(../fonts/didot-htf-m96-medium-ital.ttf);
+}
+@font-face {
+  font-family: thex;
+  src: url(../fonts/HelveticaNeueLTPro-ThEx.otf);
+}
+
+*{
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+.bg-img{
+  position:absolute;
+}
+
+.row{
+  width:100%;
+}
+ul,li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.page-section{
+  height:900px;
+  .content,.container{
+    width:1000px;
+    margin:0 auto;
+  }
+}
+.img-bg{
+  display:none;
+}
+html{
+  width:100%;
+  body{
+    width:100%;
+    
+  }
+}
+#landing{
+  background-attachment:fixed;
+}
+
+@import "_common";
+@import "_fonts";
+@import "_nav_bar";
+@import "_home";
+@import "_about";
+@import "_news";
+@import "_shop";
+@import "_lookbooks";
+@import "_vip";
+@import "_contact";

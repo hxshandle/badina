@@ -1,0 +1,51 @@
+*{
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+html{
+  width:100%;
+  body{
+    width:100%;
+    
+  }
+}
+
+
+.row{
+  width:100%;
+}
+ul,li{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.page-section{
+  height:900px;
+  .content,.container{
+    width:1000px;
+    margin:0 auto;
+  }
+}
+
+.page-wrapper{
+  position:relative;
+  .page{
+    position:absolute;
+    width:100%;
+    display: none;
+    &.active{
+      display: block;
+      left:0;
+      top:0;
+    }
+  }
+}
+
+
+.fl{
+  float:left;
+}
+.fr{
+  float:right;
+}

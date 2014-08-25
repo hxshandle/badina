@@ -1,0 +1,135 @@
+@font-face {
+  font-family: didot-bold;
+  src: url(../fonts/Didot_Bold.ttf); }
+@font-face {
+  font-family: didot;
+  src: url(../fonts/Didot.ttf); }
+@font-face {
+  font-family: didot-htf-m96-medium-ital;
+  src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
+@font-face {
+  font-family: thex;
+  src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.bg-img {
+  position: absolute; }
+
+.row {
+  width: 100%; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.page-section {
+  height: 900px; }
+  .page-section .content, .page-section .container {
+    width: 1000px;
+    margin: 0 auto; }
+
+.img-bg {
+  display: none; }
+
+html {
+  width: 100%; }
+  html body {
+    width: 100%; }
+
+#landing {
+  background-attachment: fixed; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  width: 100%; }
+  html body {
+    width: 100%; }
+
+.row {
+  width: 100%; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.page-section {
+  height: 900px; }
+  .page-section .content, .page-section .container {
+    width: 1000px;
+    margin: 0 auto; }
+
+.page-wrapper {
+  position: relative; }
+  .page-wrapper .page {
+    position: absolute;
+    width: 100%;
+    display: none; }
+    .page-wrapper .page.active {
+      display: block;
+      left: 0;
+      top: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+@font-face {
+  font-family: didot-bold;
+  src: url(../fonts/Didot_Bold.ttf); }
+@font-face {
+  font-family: didot;
+  src: url(../fonts/Didot.ttf); }
+@font-face {
+  font-family: didot-htf-m96-medium-ital;
+  src: url(../fonts/didot-htf-m96-medium-ital.ttf); }
+@font-face {
+  font-family: thex;
+  src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
+.ft-STHeiti {
+  font-family: "STHeiti Light [STXihei]"; }
+
+.ft-dodit {
+  font-family: dodit; }
+
+.ft-thex {
+  font-family: thex; }
+
+.ft-arial {
+  font-family: Arial; }
+
+.fz-12 {
+  font-size: 12px; }
+
+.fz-16 {
+  font-size: 16px; }
+
+.fz-42 {
+  font-size: 42px; }
+
+.fz-10 {
+  font-size: 10px; }
+
+.top-nav-bar {
+  width: 100%;
+  height: 50px;
+  background: #222222; }
+  .top-nav-bar ul {
+    float: left; }
+    .top-nav-bar ul li {
+      display: inline-block; }
+      .top-nav-bar ul li a {
+        line-height: 50px;
+        color: #ffffff;
+        text-decoration: none;
+        margin: 0 25px; }
+
+/*# sourceMappingURL=style.css.map */
