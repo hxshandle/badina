@@ -71,7 +71,8 @@ ul, li {
   .page-wrapper .page {
     position: absolute;
     width: 100%;
-    display: none; }
+    display: none;
+    background: #fff; }
     .page-wrapper .page.active {
       display: block;
       left: 0;

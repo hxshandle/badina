@@ -1,6 +1,6 @@
 $(function () {
   var $root = $('#lookbooks'),
-      $tsMargin = 30,
+      $tsMargin = 100,
       $scrollEasing=500, //scroll easing amount (0 for no easing)
       $scrollEasingType="easeOutCirc"; //scroll easing type
 

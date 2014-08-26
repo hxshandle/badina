@@ -35,6 +35,7 @@ ul,li{
     position:absolute;
     width:100%;
     display: none;
+    background:#fff;
     &.active{
       display: block;
       left:0;
