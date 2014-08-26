@@ -5,17 +5,18 @@
     ul#lookbooks-nav
       each item in m
         li
-          a(href="javascript:void(0)") #{item.toUpperCase()}
+          a(href="javascript:void(0)" data-ref="#{item.toLowerCase()}") #{item.toUpperCase()}
   .gallery-wrapper
     each item in m
-      ul.gallery-entry(id="#{item}-gallery")
-        - for (var i =0; i < 20;i++)
-          - var _src = "img/lookbooks/images-"+(i%4+1)+".jpg"
-          li
-            .image-pod
-              img(src=_src)
-              .extra
-                a.weibo weibo
-                a.weixin weixin
+      .thumbScroller-container(id="#{item}-thumb-container")
+        ul.gallery-entry(id="#{item}-gallery")
+          - for (var i =0; i < 20;i++)
+            - var _src = "img/lookbooks/images-"+(i%4+1)+".jpg"
+            li
+              .image-pod
+                img(src=_src)
+                .extra
+                  a.weibo weibo
+                  a.weixin weixin
 
 

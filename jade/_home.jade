@@ -1,2 +1,8 @@
 .page.active#home
   include _nav_bar
+  ul#home-slider
+    each item in [1,2,3,4,5]
+      li
+        .slider-entry
+          h1 Slider #{item}
+  .section2#home-section-2
