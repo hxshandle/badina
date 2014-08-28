@@ -1,3 +1,4 @@
+include _functions
 - var m = ["spring","summer","autumn","winter"]
 .page#lookbooks
   include _nav_bar_light
@@ -14,9 +15,10 @@
             - var _src = "img/lookbooks/images-"+(i%4+1)+".jpg"
             li
               .image-pod
-                img(src=_src)
+                img.pod-img(src=_src)
                 .extra
-                  a.weibo weibo
-                  a.weixin weixin
+                  +socialIcon('weibo')
+                  +socialIcon('weixin')
+  include _page_footer
 
 

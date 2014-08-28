@@ -44,7 +44,12 @@ ul,li{
   }
 }
 
-
+.social-icon{
+  width:16px;
+  height: 16px;
+  display: inline-block;
+  cursor:pointer;
+}
 .fl{
   float:left;
 }
@@ -54,3 +59,17 @@ ul,li{
 .clear{
   clear:both;
 }
+
+
+@mixin jScrollBar(){
+  .jspVerticalBar{
+    background:none;
+  }
+  .jspDrag{
+    background:#999;
+  }
+  .jspTrack{
+    background:url(../img/6/scroll-gb.png) repeat-y 2px 0 ;
+  }
+}
+

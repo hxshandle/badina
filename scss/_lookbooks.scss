@@ -37,9 +37,13 @@
             z-index: 1;
             transition: all 0.4s;
             transform: scale(1.0);
-            img{
+            img.pod-img{
               width:300px;
               height:400px;
+            }
+            .extra{
+              height: 0;
+              overflow: hidden;
             }
             &:hover{
               z-index: 10;
@@ -51,6 +55,8 @@
               .extra{
                 font-size:12px;
                 height:20px;
+                display: block;
+                text-align:center;
               }
             }//.image-pod:hover
           }//.image-pod

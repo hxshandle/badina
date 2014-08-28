@@ -10,10 +10,14 @@ $(function () {
     var $this = $(this),
         scrollerWidth = 300 * $this.children().size(),
         sliderWidth = global.winWidth;
+    $this.isLookScorller = false;
     $this.css({width: scrollerWidth + 'px', "margin-left": $tsMargin + 'px'});
     var $thumbScroller_container = $this.parents('.thumbScroller-container');
     // bing mouse move
     $thumbScroller_container.mousemove(function (e) {
+      if($this.isLookScorller){
+        return;
+      }
       if (scrollerWidth > sliderWidth) {
         var mouseCoords = e.pageX;
         var mousePercentX = mouseCoords / sliderWidth;
@@ -29,6 +33,16 @@ $(function () {
         }
       }
     });
+
+    //prevent move for extra area
+    $('.extra',$this).hover(
+        function(){
+          $this.isLookScorller = true;
+        },
+        function(){
+          $this.isLookScorller = false;
+        }
+    );
   });
 
   $('#lookbooks-nav a').click(function(){
@@ -41,6 +55,8 @@ $(function () {
     $("#"+$this.data('ref')+"-thumb-container").toggleClass('active');
 
   });
+
+
 
 
 });
