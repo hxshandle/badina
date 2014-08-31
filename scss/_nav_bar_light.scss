@@ -1,4 +1,5 @@
 .top-nav-bar-light{
+  padding-top:35px;
   &:after{
     content:'';
     clear:both;
@@ -7,10 +8,17 @@
     width:1000px;
     margin:0 auto;
     text-align:center;
+    padding-bottom:30px;
   }
   .nav-row{
     width:1000px;
     margin:0 auto;
+    .top-nav-search{
+      background:url(../img/topnavlight/search.png) no-repeat;
+      width:160px;
+      height: 25px;
+      border:0;
+    }
     ul{
       float:left;
       li{
@@ -21,6 +29,9 @@
           text-decoration: none;
           //padding:2px 5px;
           margin:0 20px;
+          font-size:14px;
+          font-family:"Helvetica Neue LT Pro";
+          color:#666;
           &.active{
             border-bottom:1px solid #222222;
           }
@@ -28,4 +39,11 @@
       }
     }//ul
   }//.nav-row
+}
+
+.top-nav-bar-split{
+  padding-top:30px;
+  width:1000px;
+  margin:0 auto;
+  border-bottom:1px solid #f3f3f3;
 }

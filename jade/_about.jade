@@ -1,3 +1,10 @@
+include _functions
 .page#about
   include _nav_bar_light
+  .container
+    +PageHeader("ABOUT US")
+    img.fl.left-img(src="img/about/image-1.png")
+    .article.fl
+      +AboutAtricle()
+    .clear
   include _page_footer

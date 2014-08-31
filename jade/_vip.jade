@@ -1,4 +1,28 @@
+include _functions
+mixin IptGroup(label,name)
+  .ipt-group
+    label(for=name) #{label}
+    input(name=name)
+
+mixin IptGroup2(label,name)
+  .ipt-group
+    label(for=name) #{label}
+    input.code(name=name)
+    img.code(src="http://placehold.it/70X26")
+
 .page#vip
   include _nav_bar_light
-  h1 VIP
+  .container
+    +PageHeader("VIP CENTER")
+    .vip-form
+      +IptGroup("用户名：","name")
+      +IptGroup("密  码：","password")
+      +IptGroup2("验证码：","code")
+      .actions
+        input.btn-login(type="button" value="登陆")
+    .cp
+      p DESIGNICE FASHION AS THE CORE, THE PURSUIT OF ELEGANT, ADVOCATES
+      p THE INTEREST INTO THE DESIGN, THE THREE SERIES OF
+      p PRODUCTS -- FASHION @ WORK SERIES, EASY STREET SERIES, CITY OF MAGNIFICENT SERIES
+  .clear
   include _page_footer

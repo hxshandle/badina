@@ -1,15 +1,19 @@
 #lookbooks{
+  overflow: hidden;
   .content{
     width:1000px;
     margin:0 auto;
     #lookbooks-nav{
       width:100%;
-      background:#333333;
+      height:60px;
+      background: #f3f3f3;
+      margin-top:30px;
       li{
         display:inline;
         padding:0 20px;
+        line-height: 60px;
         a{
-          color:#fff;
+          color: #666666;
           text-decoration: none;
         }
       }
@@ -42,8 +46,12 @@
               height:400px;
             }
             .extra{
-              height: 0;
-              overflow: hidden;
+              height: 27px;
+              visibility: hidden;
+              a{
+                width:31px;
+                height:27px;
+              }
             }
             &:hover{
               z-index: 10;
@@ -53,9 +61,7 @@
               box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
 
               .extra{
-                font-size:12px;
-                height:20px;
-                display: block;
+                visibility:visible;
                 text-align:center;
               }
             }//.image-pod:hover

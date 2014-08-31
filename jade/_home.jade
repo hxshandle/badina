@@ -1,8 +1,78 @@
+mixin smallPod(isMarge,isLarge)
+  - var _css = isMarge ? "ml":""
+  .small-pod(class=_css)
+    img(src="img/home/small-pod-img.png")
+    .mask
+      .h1 FALL 2014
+      .h2-zh 芭蒂娜走秀视频
+      .h2-en BADINA VIDEO
+
+mixin largePod()
+  .largePod
+    img(src="img/home/large-pod-img.png")
+    .mask
+      .h1 AboutUs
+      .h2-zh 品牌信息
+      .h2-en BRAND INFO MATION
+
+mixin smallPod2()
+  .small-pod-2
+    img(src="img/home/small-pod-img2.png")
+    .mask
+      .h1 AboutUs
+      .h2-zh 品牌信息
+      .h2-en BRAND INFO MATION
+
+mixin lnk(img,txt)
+  .lnk
+    img.fl(src=img)
+    a.txt #{txt}
+  .clear
+
+mixin lnk2(img,txt)
+  .lnk.ml
+    img.fl(src=img)
+    a.txt #{txt}
+  .clear
+
 .page.active#home
   include _nav_bar
   ul#home-slider
     each item in [1,2,3,4,5]
       li
         .slider-entry
-          h1 Slider #{item}-ADB
+          img.fr(src="img/home/bg-1.jpg")
+          .desc
+            img.des(src="img/home/text-1.png")
+            img.more(src="img/home/view-more.png")
+
   .section2#home-section-2
+    a.move-top(href="#home-slider")
+      img(src="img/home/move-top.png")
+    .container
+      .pod-row
+        +smallPod(true)
+        +smallPod(true)
+        +smallPod()
+        .clear
+      .pod-row
+        +largePod()
+        +smallPod2()
+  .lnks#lnks
+    .container
+      .col
+        .title Contact
+        +lnk("img/home/lnk-1.png","55 Main st.Toronto,ON M1H 3A5")
+        +lnk("img/home/lnk-2.png","(416) 555-5252")
+        +lnk("img/home/lnk-3.png","badina@tbadina.com")
+      .col
+        .title Socail
+        +lnk2("img/home/lnk-4.png","- WECHAT")
+        +lnk2("img/home/lnk-5.png","- SINA WEIBO")
+        +lnk2("img/home/lnk-6.png","- SHOP ONLINE")
+      .col
+        .title Links
+        a.normal www.colove.cc
+        .split
+        span.txt © copyright 2014 badina
+        span.txt all rights reservde

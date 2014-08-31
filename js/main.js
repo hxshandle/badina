@@ -3,7 +3,6 @@ var App={
   blockedPageSwitch:false,
   switchPage:function(pageId){
     if(this.blockedPageSwitch){
-      console.debug('blocked ...');
       return;
     }
     var currentActivePageId = $('.page.active').attr('id');

@@ -7,6 +7,7 @@ html{
   width:100%;
   body{
     width:100%;
+    min-width: 1280px;
     
   }
 }
@@ -31,16 +32,36 @@ ul,li{
 .page-wrapper{
   position:relative;
   overflow-x: hidden;
+  min-width: 1280px;
   .page{
     position:absolute;
     width:100%;
-    display: none;
+    left:3000px;
+    display:none;
     background:#fff;
     &.active{
       display: block;
       left:0;
       top:0;
     }
+    .container{
+      position:relative;
+      width:1000px;
+      margin:0 auto;
+
+      .page-header{
+        padding-top:60px;
+        .title{
+          font-size:26px;
+          font-family:dodit;
+          color:#000;
+        }
+        .split{
+          border-bottom:1px solid #dcdcdc;
+          padding-top:15px;
+        }
+      }//.page-header
+    }//.container
   }
 }
 
@@ -66,10 +87,10 @@ ul,li{
     background:none;
   }
   .jspDrag{
-    background:#999;
+    background:#000;
   }
   .jspTrack{
-    background:url(../img/6/scroll-gb.png) repeat-y 2px 0 ;
+    background:url(../img/scroller-bg.png) repeat-y 1px 0 ;
   }
 }
 

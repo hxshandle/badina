@@ -1,0 +1,28 @@
+mixin ProductList(identify)
+  a.nav-left
+    img(src="img/products/prod-nav-left.png")
+  a.nav-right
+    img(src="img/products/prod-nav-right.png")
+  ul(class="#{identify}-list" data-index=0 data-group="#{identify}-group")
+    - for (var i = 0; i < 20; i++)
+      - var _src = "img/products/image-"+(i%2+1)+".png"
+      li(data-ref="#{identify}-group" href=_src)
+        img(src=_src)
+
+- var m = ["spring","summer","autumn","winter"]
+.page#products
+  include _nav_bar_light
+  .container
+    ul.prod-menu
+      each item,idx in m
+        li
+          if (idx == 0)
+            a.active(href="javascript:void(0)" data-ref="#{item.toLowerCase()}") #{item.toUpperCase()}
+          else
+            a(href="javascript:void(0)" data-ref="#{item.toLowerCase()}") #{item.toUpperCase()}
+    .products-gallery
+      each item,idx in m
+        - var act = idx == 0 ? 'active':''
+        .prod-viewer(class="product-season-#{item} #{act}")
+          +ProductList(item)
+  include _page_footer

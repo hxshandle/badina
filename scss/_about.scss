@@ -1,0 +1,30 @@
+#about{
+  .container{
+    padding-bottom:70px;
+  }
+  .left-img{
+    padding-top:30px;
+    padding-left:20px;
+  }
+  .article{
+    overflow: hidden;
+    width:600px;
+    height: 618px;
+    padding-top:30px;
+    padding-left:45px;
+    .content{
+      width:550px;
+      height:618px;
+      h4{
+        font-size:14px;
+        font-family:"STHeiti Light [STXihei]";
+      }
+      p{
+        font-size:12px;
+        font-family:"STHeiti Light [STXihei]";
+      }
+      @include jScrollBar()
+
+    }
+  }
+}

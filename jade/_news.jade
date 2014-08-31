@@ -1,4 +1,40 @@
+mixin icon(name)
+  a.icon.fr
+    img(src="img/#{name}.png")
+
+mixin NewsDetail(idx)
+  .news-detail-wrapper
+    .news-detail
+      img.fl(src="http://placehold.it/550x525")
+      .news-entry.fl
+        .header
+          .date.fl 2014/06/18 - #{idx}
+          +icon("weixin")
+          +icon("weibo")
+        .clear
+        .news-title 热烈祝贺芭蒂娜官网改版上线
+        .news-article
+          - for (var i = 0 ; i < 20; i++)
+            p 诞生于意大利纯正轻奢风格的COLOVE（卡拉佛），传递“独立、悦己、分享”的精神主张，探求艺术情怀、先锋创意与实用主义成衣激情碰撞，呈现出自我、率性、利落、精致的精神气场与个性绽放的摩登风格。
+              p 自我精神、个性分格是COLOVE（卡拉佛）品牌所推崇的时尚哲学，造型的出发原点是干净、简约却锐利的气场，廓形与线条透露着都会气息和女性个性的现代精神，强调利落整体感和绝对自信的强大气场。
+
+mixin PageNewsList()
+  ul.list
+    - for (var i = 0; i < 30; i++)
+      - var _height = Math.floor(Math.random() * 200 + 200)
+      - var _src = "http://placehold.it/248x"+_height
+      li.news-pod(data-height=_height data-rel="news-list" data-idx=i)
+        .pod
+          img(src=_src)
+          .mask
+            .date DATE: 2014/06/08
+            .txt 热烈祝贺芭蒂娜官网全新改版上线......
+            .more 点击查看>>
+        +NewsDetail(i)
+
 .page#news
   include _nav_bar_light
-  .row News
+  .container
+    +PageNewsList()
+    .clear
   include _page_footer

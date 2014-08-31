@@ -1,0 +1,82 @@
+#news {
+  ul.list {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    li.news-pod {
+      float: left;
+      width: 250px;
+      cursor:pointer;
+      .pod {
+        position: relative;
+        .mask {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 90px;
+          background: #fff;
+          opacity: 0.5;
+          font-family:"STHeiti Light [STXihei]";
+          width:248px;
+          padding-left:10px;
+          padding-top:10px;
+          .date {
+            background: #000;
+            color: #fff;
+            font-size: 10px;
+            display: inline-block;
+            opacity: 1;
+            margin-bottom:6qpx;
+          }
+          .txt {
+            font-size: 12px;
+            width:140px;
+            line-height: 1.2em;
+          }
+          .more{
+            font-size:12px;
+            text-align: right;
+            padding-right:10px;
+          }
+        }
+      }
+      .news-detail-wrapper{
+        display:none;
+      }
+    }
+  }
+}
+
+.news-detail{
+  padding:16px;
+  .news-entry{
+    width:370px;
+    margin-left:30px;
+    height:525px;
+    .header{
+      .icon{
+        cursor:pointer;
+      }
+      .date{
+        font-size:40px;
+        font-family: dodit;
+        color:#2c2d2e;
+        float:left;
+      }
+    }
+    .news-title{
+      font-size:16px;
+      color:#666;
+    }
+    .news-article{
+      height:450px;
+
+      overflow: hidden;
+      font-size:10px;
+      color:#2c2d2e;
+      @include jScrollBar()
+    }
+  }
+}
+
+

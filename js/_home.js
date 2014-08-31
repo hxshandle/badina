@@ -8,7 +8,7 @@ $(function () {
     navigation: {
       active: false
     },
-    height: 600,
+    height: 873,
     width: global.winWidth,
     effect: {
       slide: {
@@ -63,11 +63,11 @@ $(function () {
     img.onload = function () {
       backgrounImageDim = [this.width, this.height];
       var backgroundPosX = -(this.width - global.winWidth) / 2;
-      var backgroundPosY = -(this.height - 900) / 2;
+      var backgroundPosY = -(this.height - 690) / 2;
       var pos = backgroundPosX + 'px ' + backgroundPosY + 'px';
       $('#home-section-2').css({'background-position': pos});
     }
-    img.src = "./img/home/9158_2560x1600.jpg";
+    img.src = "./img/home/section2-bg.png";
   }
 
   getBackgroundImageDim();
@@ -75,16 +75,16 @@ $(function () {
   //section II
   $('#home-section-2').mousemove(function (e) {
     var $this = $(this),
-        scale = 0.2,
+        scale = 0.4,
         posX = e.pageX,
         posY = e.pageY,
         pX = posX / global.winWidth,
-        pY = posY / 900;
+        pY = posY / 690;
     var newPosX = -(backgrounImageDim[0] - global.winWidth) * pX * scale,
-        newPosY = -(backgrounImageDim[1] - 900) * pY * scale;
+        newPosY = -(backgrounImageDim[1] - 690) * pY * scale;
     $this.stop().animate({backgroundPosition: newPosX + 'px ' + newPosY + 'px'});
-
-
   });
+
+  $('a.move-top').smoothScroll({scrollElement:$('#pages-wrapper'),isSpecScroll:true});
 
 });

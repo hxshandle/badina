@@ -206,6 +206,9 @@ $.smoothScroll = function(options, px) {
                         0;
 
   aniProps[scrollDir] = scrollTargetOffset + scrollerOffset + opts.offset;
+  if(opts.isSpecScroll){
+    aniProps[scrollDir] = 0;
+  }
   speed = opts.speed;
 
   // automatically calculate the speed of the scroll based on distance / coefficient
