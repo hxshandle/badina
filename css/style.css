@@ -139,6 +139,9 @@ ul, li {
 @font-face {
   font-family: thex;
   src: url(../fonts/HelveticaNeueLTPro-ThEx.otf); }
+@font-face {
+  font-family: br;
+  src: url(../fonts/Bauerda-Regu.ttf); }
 .ft-STHeiti {
   font-family: "STHeiti Light [STXihei]"; }
 
@@ -162,6 +165,9 @@ ul, li {
 
 .fz-10 {
   font-size: 10px; }
+
+.fz-24 {
+  font-size: 24px; }
 
 .top-nav-bar {
   width: 100%;
@@ -233,9 +239,12 @@ ul, li {
 #home #home-slider {
   height: 873px; }
   #home #home-slider li .slider-entry {
-    height: 873px; }
+    height: 873px;
+    overflow: hidden;
+    position: relative; }
     #home #home-slider li .slider-entry .desc {
-      padding-top: 160px; }
+      padding-top: 160px;
+      margin-right: 35px; }
       #home #home-slider li .slider-entry .desc img {
         display: block;
         margin: 0 auto; }
@@ -276,11 +285,15 @@ ul, li {
         position: absolute;
         right: 0;
         top: 0;
-        transition: all 0.5s; }
+        transition: all 0.5s;
+        font-family: br; }
         #home #home-section-2 .container .small-pod .mask .h2-zh {
           display: none; }
         #home #home-section-2 .container .small-pod .mask .h1 {
-          padding-top: 50px; }
+          padding-top: 50px;
+          font-size: 18px; }
+        #home #home-section-2 .container .small-pod .mask .h2-en, #home #home-section-2 .container .small-pod .mask .h2-zh {
+          color: #999; }
         #home #home-section-2 .container .small-pod .mask .h1, #home #home-section-2 .container .small-pod .mask .h2-en, #home #home-section-2 .container .small-pod .mask .h2-zh {
           text-align: center; }
       #home #home-section-2 .container .small-pod img {
@@ -331,7 +344,8 @@ ul, li {
         height: 100%;
         text-align: center;
         left: 0;
-        top: 0; }
+        top: 0;
+        font-family: br; }
         #home #home-section-2 .container .largePod .mask .h1 {
           padding-top: 90px; }
         #home #home-section-2 .container .largePod .mask .h2-en {
@@ -369,7 +383,8 @@ ul, li {
         height: 100%;
         text-align: center;
         left: 0;
-        top: 0; }
+        top: 0;
+        font-family: br; }
         #home #home-section-2 .container .small-pod-2 .mask .h1 {
           padding-top: 90px; }
         #home #home-section-2 .container .small-pod-2 .mask .h2-en {

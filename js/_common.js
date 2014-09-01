@@ -1,9 +1,12 @@
 var global={};
-
+global.resizeList = [];
 function onResize(){
   var $win = $(window);
   global.winWidth = $win.width();
   global.winHeight = $win.height();
+  for (var i = 0; i < global.resizeList.length;i++){
+    global.resizeList[i].call(this);
+  }
 }
 
 function scrollable(selector){

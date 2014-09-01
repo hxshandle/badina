@@ -4,8 +4,11 @@
     li {
       .slider-entry {
         height: 873px;
+        overflow: hidden;
+        position:relative;
         .desc {
           padding-top: 160px;
+          margin-right:35px;
           img {
             display: block;
             margin: 0 auto;
@@ -57,11 +60,16 @@
           right: 0;
           top: 0;
           transition: all 0.5s;
+          font-family: br;
           .h2-zh {
             display: none;
           }
           .h1 {
             padding-top: 50px;
+            font-size:18px;
+          }
+          .h2-en,.h2-zh{
+            color:#999;
           }
           .h1, .h2-en, .h2-zh {
             text-align: center;
@@ -90,6 +98,7 @@
             }
             .h2-en {
               display: none;
+
             }
           }
         }
@@ -117,6 +126,7 @@
           text-align: center;
           left: 0;
           top: 0;
+          font-family: br;
           .h1 {
             padding-top: 90px;
           }
@@ -166,6 +176,7 @@
           text-align: center;
           left: 0;
           top: 0;
+          font-family: br;
           .h1 {
             padding-top: 90px;
           }
