@@ -53,7 +53,6 @@ $(function () {
     }
     $currentActive.toggleClass('active');
     $("#"+$this.data('ref')+"-thumb-container").toggleClass('active');
-
   });
 
 

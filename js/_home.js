@@ -12,7 +12,7 @@ $(function () {
     width: global.winWidth,
     effect: {
       slide: {
-        speed: 800
+        speed: 2000
       },
       fade: {
         speed: 300,

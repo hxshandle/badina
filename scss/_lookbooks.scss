@@ -41,6 +41,10 @@
             z-index: 1;
             transition: all 0.4s;
             transform: scale(1.0);
+            -ms-filter: blur(2px);
+            -webkit-filter:blur(2px);
+            -moz-filter:blur(2px);
+            filter: blur(2px);
             img.pod-img{
               width:300px;
               height:400px;
@@ -59,6 +63,10 @@
               -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
               -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
               box-shadow: 0px 0px 5px rgba(0,0,0,0.6);
+              -ms-filter: blur(0px);
+              -webkit-filter:blur(0px);
+              -moz-filter:blur(0px);
+              filter: blur(0px);
 
               .extra{
                 visibility:visible;
