@@ -56,6 +56,10 @@ $(function () {
   });
 
 
+  $('.thumbScroller-container .gallery-entry .pod-img').colorbox({
+    returnFocus:false
+  });
+
 
 
 });

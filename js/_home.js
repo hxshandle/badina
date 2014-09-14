@@ -73,17 +73,27 @@ $(function () {
   getBackgroundImageDim();
 
   //section II
-  $('#home-section-2').mousemove(function (e) {
-    var $this = $(this),
-        scale = 0.4,
-        posX = e.pageX,
-        posY = e.pageY,
-        pX = posX / global.winWidth,
-        pY = posY / 690;
-    var newPosX = -(backgrounImageDim[0] - global.winWidth) * pX * scale,
-        newPosY = -(backgrounImageDim[1] - 690) * pY * scale;
-    $this.stop().animate({backgroundPosition: newPosX + 'px ' + newPosY + 'px'});
-  });
+//  $('#home-section-2').mousemove(function (e) {
+//    var $this = $(this),
+//        scale = 0.4,
+//        posX = e.pageX,
+//        posY = e.pageY,
+//        pX = posX / global.winWidth,
+//        pY = posY / 690;
+//    var newPosX = -(backgrounImageDim[0] - global.winWidth) * pX * scale,
+//        newPosY = -(backgrounImageDim[1] - 690) * pY * scale;
+//    $this.stop().animate({backgroundPosition: newPosX + 'px ' + newPosY + 'px'});
+//  });
+
+  function animateBG(){
+    $('#home-section-2').css("backgroundPosition","0px 0px");
+    $('#home-section-2').animate({
+      backgroundPosition:"-1900px 0px"
+    },10000,"linear",function(){
+      animateBG();
+    });
+  }
+  animateBG();
 
   function resize() {
     $('#home-slider .slider-entry').css({width:global.winWidth+'px'});

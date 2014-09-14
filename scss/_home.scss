@@ -1,3 +1,28 @@
+@mixin grayscale1{
+  filter: grayscale(100%); /* Current draft standard */
+  -webkit-filter: grayscale(100%); /* New WebKit */
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: gray; /* IE */
+}
+
+@mixin grayscale0{
+  filter: grayscale(0%); /* Current draft standard */
+  -webkit-filter: grayscale(0%); /* New WebKit */
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%); /* Not yet supported in Gecko, Opera or IE */
+  filter: gray; /* IE */
+}
+
+@mixin trans{
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 #home {
   #home-slider {
     height: 873px;
@@ -23,9 +48,9 @@
   }
   //#home-slider
   #home-section-2 {
-    background: url(../img/home/section2-bg.png) no-repeat;
+    background: url(../img/home/section2-bg.png);
     width: 100%;
-    height: 690px;
+    height: 760px;
     overflow:hidden;
     .move-top{
       position:fixed;
@@ -40,7 +65,7 @@
       margin: 0 auto;
       padding-top: 40px;
       .ml {
-        margin-right: 10px;
+        margin-right: 11px;
       }
       .pod-row {
         margin-bottom: 10px;
@@ -48,11 +73,40 @@
       .small-pod {
         float: left;
         position: relative;
-        width: 325px;
+        width: 326px;
         height: 315px;
         cursor: pointer;
+        background:#fff;
+
+        .mask-bottom{
+          position:absolute;
+          left:0;
+          bottom:0;
+          z-index:2;
+          width:100%;
+          height:48px;
+          background:url(../img/home/store-image-bg.png) no-repeat;
+          text-align:center;
+        }
+        .mask-full{
+          position:absolute;
+          left:0;
+          top:0;
+          width:100%;
+          height:100%;
+          z-index:2;
+          background:rgba(0,0,0,0.4);
+          text-align: center;
+          padding-top:66px;
+          @include trans;
+          &:hover{
+            background:rgba(0,0,0,0);
+          }
+        }
+
         .mask {
           background: #fff;
+          display:none;
           width: 150px;
           height: 315px;
           z-index: 2;
@@ -80,7 +134,8 @@
           -webkit-filter: grayscale(100%); /* New WebKit */
           -moz-filter: grayscale(100%);
           -ms-filter: grayscale(100%);
-          filter: gray; /* IE */
+
+          transition: all 1s;
         }
         &:hover {
           img {
@@ -89,7 +144,7 @@
             -moz-filter: grayscale(0%);
             -ms-filter: grayscale(0%);
             -o-filter: grayscale(0%); /* Not yet supported in Gecko, Opera or IE */
-            filter: gray; /* IE */
+
           }
           .mask {
             width: 170px;
@@ -163,8 +218,32 @@
         //:hover
       }
       //.largePod
+      .very-large-pod{
+        width:1000px;
+        height: 340px;
+        cursor:pointer;
+        @include trans;
+        .bg-img{
+          width:100%;
+          @include grayscale1;
+        }
+        .mask{
+          position:relative;
+          .img-txt{
+            position: absolute;
+            left:110px;
+            top:50px;
+          }
+        }
+        &:hover{
+          .bg-img{
+            @include grayscale0;
+          }
+        }
+
+      }//.very-large-pod
       .small-pod-2 {
-        width: 315px;
+        width: 326px;
         height: 280px;
         position: relative;
         float: left;
@@ -266,7 +345,7 @@
         }
         .split{
           border-bottom:1px solid #767676;
-          margin-bottom:25px;
+          margin:25px 0;
         }
         span.txt{
           display:block;

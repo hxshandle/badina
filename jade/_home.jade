@@ -7,6 +7,19 @@ mixin smallPod(isMarge,isLarge)
       .h2-zh 芭蒂娜走秀视频
       .h2-en.fz-24 BADINA VIDEO
 
+
+mixin smallPod1()
+  .small-pod.ml
+    img(src="img/home/small-pod-img.png")
+    .mask-bottom
+      img.txt(src="img/home/store-image-txt.png")
+
+mixin smallPod3()
+  .small-pod.ml
+    img(src="img/home/small-pod-img-2.png")
+    .mask-full
+      img.txt(src="img/home/look-book-txt.png")
+
 mixin largePod()
   .largePod
     img(src="img/home/large-pod-img.png")
@@ -15,24 +28,30 @@ mixin largePod()
       .h2-zh 品牌信息
       .h2-en BRAND INFO MATION
 
-mixin smallPod2()
-  .small-pod-2
-    img(src="img/home/small-pod-img2.png")
+mixin smallPod4()
+  .small-pod
+    .mask-full
+      img.txt(src="img/home/last-txt.png")
+
+
+
+mixin veryLargePod()
+  .very-large-pod
+    img.bg-img(src="img/home/top-big.png")
     .mask
-      .h1 AboutUs
-      .h2-zh 品牌信息
-      .h2-en.fz-24 BRAND INFO MATION
+      img.img-txt(src="img/home/top-big-txt.png")
+mixin lnk2(img,txt)
+  .lnk
+    img.fl(src=img)
+    a
+      img(src="img/home/txt/#{txt}")
+  .clear
 
 mixin lnk(img,txt)
   .lnk
-    img.fl(src=img)
-    a.txt #{txt}
-  .clear
+    a
+      img.fl(src="img/home/txt/#{img}")
 
-mixin lnk2(img,txt)
-  .lnk.ml
-    img.fl(src=img)
-    a.txt #{txt}
   .clear
 
 .page.active#home
@@ -51,28 +70,32 @@ mixin lnk2(img,txt)
       img(src="img/home/move-top.png")
     .container
       .pod-row
-        +smallPod(true)
-        +smallPod(true)
-        +smallPod()
+        +veryLargePod()
         .clear
       .pod-row
-        +largePod()
-        +smallPod2()
+        +smallPod1
+        +smallPod3
+        +smallPod4
+        .clear
+
   .lnks#lnks
     .container
       .col
-        .title Contact
-        +lnk("img/home/lnk-1.png","55 Main st.Toronto,ON M1H 3A5")
-        +lnk("img/home/lnk-2.png","(416) 555-5252")
-        +lnk("img/home/lnk-3.png","badina@tbadina.com")
+        .title
+          img(src="img/home/txt/cantact.png")
+        +lnk("address.png")
+        +lnk("phone.png")
+        +lnk("email.png")
       .col
-        .title Socail
-        +lnk2("img/home/lnk-4.png","- WECHAT")
-        +lnk2("img/home/lnk-5.png","- SINA WEIBO")
-        +lnk2("img/home/lnk-6.png","- SHOP ONLINE")
+        .title
+          img(src="img/home/txt/socail.png")
+        +lnk("weichart.png")
+        +lnk("sina.png")
+        +lnk("tmall.png")
       .col
-        .title Links
-        a.normal www.colove.cc
+        .title
+          img(src="img/home/txt/links.png")
+        a
+          img(src="img/home/txt/colove.cc.png")
         .split
-        span.txt © copyright 2014 badina
-        span.txt all rights reservde
+        img(src="img/home/txt/copyright.png")
