@@ -42,6 +42,9 @@ function doNivoSlider(){
   });
 }
 
+
+
+
 $(function() {
 	$('.jScrollPane').jScrollPane();
 	$(".img-liquid-fill").imgLiquid();

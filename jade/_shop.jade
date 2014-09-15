@@ -1,4 +1,5 @@
 include _functions
+
 .page#shop
   include _nav_bar_light
   .container
@@ -10,9 +11,12 @@ include _functions
         a(data-ref="show") 店铺图片
 
     .map
+
       .condition.fl
-        select#provsion
-        select#city
+        .province-box
+          select#provsion
+        .city-box
+          select#city
 
       .map-container.fl
         #allmap
