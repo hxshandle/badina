@@ -1,5 +1,22 @@
+include _functions
 .page#shop
   include _nav_bar_light
-  .div(style="text-align:center")
-    img(src="img/coming-soon.jpg")
+  .container
+    +PageHeader("SHOP")
+    ul.shop-menu
+      li
+        a.active(data-ref="map") 店铺地址
+      li
+        a(data-ref="show") 店铺图片
+
+    .map
+      .condition.fl
+        select#provsion
+        select#city
+
+      .map-container.fl
+        #allmap
+      .clear
+
+
   include _page_footer
